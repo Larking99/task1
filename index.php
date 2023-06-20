@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +17,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px;
+      height: 20px;
     }
 
     .flex-container a {
@@ -24,22 +26,39 @@
       text-decoration: none;
     }
 
+    .flex-container .icons {
+      display: flex;
+    }
+
+    .flex-container .icons img:last-child {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-left: 2rem;
+    }
+
+
     .product {
       display: flex;
       margin-top: 20px;
       padding: 10px;
+
     }
 
     .product .image {
       flex: 0 0 40%;
       max-width: 40%;
       padding-right: 20px;
+
+
     }
 
     .product .image img {
       width: 100%;
       height: auto;
       object-fit: contain;
+      border-radius: 8px;
     }
 
     .product .details {
@@ -67,7 +86,7 @@
 
     .product .details .add-to-cart {
       margin-top: 10px;
-      background-color: orange; 
+      background-color: orange;
       color: #fff;
       padding: 5px 10px;
       border: none;
@@ -78,6 +97,7 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: 10px;
+
     }
 
     .additional-images img {
@@ -86,6 +106,7 @@
       object-fit: cover;
       margin-right: 5px;
       margin-bottom: 5px;
+      border-radius: 8px;
     }
 
     @media screen and (max-width: 768px) {
@@ -109,11 +130,13 @@
       .product .image,
       .product .details {
         max-width: 100%;
+
       }
 
       .product .image {
         padding-right: 0;
         margin-bottom: 10px;
+
       }
 
       .additional-images img {
@@ -124,6 +147,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="flex-container">
     <h2>Sneakers</h2>
@@ -146,19 +170,40 @@
     <div class="image">
       <img src="./images/image-product-1.jpg" alt="product">
     </div>
+
     <div class="details">
+      <h3>Sneakers Company</h3>
       <h1>Fall Limited Edition </h1>
       <h1>Sneakers</h1>
-      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
-      <p class="price">
-      $125.00
-        50%
-        <br>
-        <span class="discount">$250.00</span>
-      </p>
-      <p>0</p>
-      
-      <button class="add-to-cart">Add to cart</button>
+      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
+        they'll withstand everything the weather can offer.</p>
+      <div style="display:flex" ;>
+        <p>
+          $125.00
+        <div style="margin:5px; color:orange" ;>
+          50%
+        </div>
+      </div>
+      <span class="discount">$250.00</span>
+      <div style="display: flex; height: auto; align-items: center;">
+        <div style="display: flex; height: 100%; margin-right: 2rem">
+          <p
+            style="width: 3rem; height: 100%; padding: 0.5rem; background-color: orange; display: flex; justify-content: center; align-items: center; font-weight: 8000; font-size: 1.5rem;">
+            -</p>
+          <p
+            style="width: 3rem; height: 100%; padding: 0.5rem; display: flex; justify-content: center; align-items: center; font-weight: 8000; font-size: 1.5rem;">
+            0</p>
+          <p
+            style="width: 3rem; height: 100%; padding: 0.5rem; background-color: orange; display: flex; justify-content: center; align-items: center; font-weight: 8000; font-size: 1.5rem;">
+            +</p>
+        </div>
+        <button class="add-to-cart" style="width: auto; height: 100%; padding: 0.9rem 0">
+        <img src="images/icon-cart.svg" alt="" style="margin-right: 1rem;">
+          Add to cart
+        </button>
+      </div>
+
+
     </div>
   </div>
 
@@ -169,4 +214,5 @@
     <img src="./images/image-product-1.jpg" alt="product">
   </div>
 </body>
+
 </html>
